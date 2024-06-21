@@ -2,6 +2,11 @@ h1 {
     text-align: center;
 }
 
+.item-hr {
+    color: red;
+    font-weight: bold;
+}
+
 #container {
     margin: 0 auto;
     max-width: 50%;

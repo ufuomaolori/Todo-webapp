@@ -18,11 +18,15 @@ addItem.addEventListener("click", () => {
     checkBox.name = "list-checkbox";
     checkBox.id = "chkBox";
 
+    const hrLine = document.createElement("hr"); // Creates Horizontal line below list items
+
     newTodoItem.appendChild(checkBox);
     newTodoItem.appendChild(newTodoTextNode);
+    newTodoItem.appendChild(hrLine);
+
     newTodoItem.classList.add("todo-item"); // styling the li elements
 
-    newTodoItem.addEventListener("click", () => {
+    checkBox.addEventListener("change", () => {
         newTodoItem.classList.toggle("completed");
     });
 
