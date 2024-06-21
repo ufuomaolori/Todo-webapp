@@ -5,11 +5,22 @@ const newTodo = document.querySelector("#inputTxt");
 
 
 addItem.addEventListener("click", () => {
-    const textValue = newTodo.value;
-    const newTodoItem = document.createElement("li");
+    const textValue = newTodo.value; //Get Textbox value
+    if (textValue.trim() === "") {
+        return; // Prevent adding empty todo items
+    }
+
+    const newTodoItem = document.createElement("li"); // Creates li element
     const newTodoTextNode = document.createTextNode(textValue);
+
+    const checkBox = document.createElement("input"); // Creates checkbox
+    checkBox.type = "checkbox";
+    checkBox.name = "list-checkbox";
+    checkBox.id = "chkBox";
+
+    newTodoItem.appendChild(checkBox);
     newTodoItem.appendChild(newTodoTextNode);
-    newTodoItem.classList.add("todo-item");
+    newTodoItem.classList.add("todo-item"); // styling the li elements
 
     newTodoItem.addEventListener("click", () => {
         newTodoItem.classList.toggle("completed");

@@ -1,21 +1,18 @@
-body {
-    text-align: center;
-}
-
 h1 {
     text-align: center;
 }
 
 #container {
     margin: 0 auto;
-    text-align: center;
+    max-width: 50%;
+    position: relative;
 }
 
 #inputTxt {
     height: 25px;
-    width: 250px;
-    border: 2px solid black;
-    border-radius: 50px;
+    width: 500px;
+    border: 1px solid black;
+    border-radius: 10px;
     text-align: center;
 }
 
@@ -23,14 +20,37 @@ h1 {
     color: blue;
     font-size: 20px;
     list-style-type: none;
-    text-align: center;
 }
 
 .selectItem {
     text-decoration: line-through;
 }
 
+#chkBox {
+    width: 30px;
+    height: 15px;
+}
+
 .completed {
     color: green;
     text-decoration: line-through;
+}
+
+#addItem {
+    width: 100px;
+    height: 30px;
+    background-color: purple;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    font-size: 15px;
+}
+
+#removeItem {
+    width: 100px;
+    height: 30px;
+    background-color: tomato;
+    color: white;
+    border-radius: 10px;
+    border: none;
 }
